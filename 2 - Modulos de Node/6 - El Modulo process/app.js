@@ -1,9 +1,3 @@
-/*
-* Curso de Node.js y Express.
-* Creado para freeCodeCamp en Español.
-* Por: Estefania Cassingena Navone. 
-*/
-
 console.log(process);
 console.log(process.env);
 

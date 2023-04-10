@@ -1,4 +1,5 @@
-const { saludar, saludarHolaMundo } = require("./saludo");
+/* const { saludar, saludarHolaMundo } = require("./saludo"); */
+import { saludar, saludarHolaMundo } from "./saludo";
 
 // Llamar a las funciones importadas desde el modulo saludo.js.
 // Ahora podemos llamarlas directamente porque usamos la
