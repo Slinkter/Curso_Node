@@ -72,13 +72,8 @@ console.log("Depues de eliminar un archivo...");
 // -------------------------
 
 const archivo = fs.readFileSync("index.html", "utf-8");
-
 console.log(archivo);
-
 fs.renameSync("index.html", "main.html");
-
 fs.appendFileSync("index.html", "<p>Hola</p>");
-
 fs.writeFileSync("index.html", "Contenido nuevo");
-
 fs.unlinkSync("main.html");
