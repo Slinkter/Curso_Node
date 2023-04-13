@@ -14,7 +14,9 @@ module.exports = {
 };
 
 // Sintaxis alternativa
+/* 
 module.exports.saludar = saludar;
 module.exports.saludarHolaMundo = saludarHolaMundo;
 
 console.log(module.exports);
+ */
