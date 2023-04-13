@@ -1,25 +1,18 @@
-/*
-* Curso de Node.js y Express.
-* Creado para freeCodeCamp en Español.
-* Por: Estefania Cassingena Navone. 
-*/
-
 // Objeto JavaScript.
 let infoCurso = {
-  "titulo": "Aprende Node.js",
-  "numVistas": 45642,
-  "numLikes": 21123,
-  "temas": [
-    "JavaScript",
-    "Node.js"
-  ],
-  "esPublico": true
+  titulo: "Aprende Node.js",
+  numVistas: 45642,
+  numLikes: 21123,
+  temas: ["JavaScript", "Node.js"],
+  esPublico: true,
 };
 
 console.log(infoCurso);
 console.log(typeof infoCurso);
+console.log(infoCurso.titulo);
+console.log(infoCurso.temas);
 
-// Objeto -> Cadena de Caracteres en formato JSON. 
+// Objeto -> Cadena de Caracteres en formato JSON.
 console.log("===== En formato JSON con JSON.stringify() =====");
 let infoJSON = JSON.stringify(infoCurso);
 

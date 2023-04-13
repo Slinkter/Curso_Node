@@ -1,7 +1,5 @@
 /*
-* Curso de Node.js y Express.
-* Creado para freeCodeCamp en Español.
-* Por: Estefania Cassingena Navone. 
+3 
 */
 
 // Ejemplo con un solo argumento.
@@ -9,7 +7,7 @@ function mostrarTema(tema) {
   console.log(`Estoy aprendiendo ${tema}`);
 }
 
-setInterval(mostrarTema, 1500, 'Node.js');
+setInterval(mostrarTema, 1500, "Node.js");
 
 // Ejemplo con varios argumentos.
 function sumar(a, b) {
