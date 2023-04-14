@@ -1,7 +1,3 @@
-/*
-3 
-*/
-
 // Ejemplo con un solo argumento.
 function mostrarTema(tema) {
   console.log(`Estoy aprendiendo ${tema}`);

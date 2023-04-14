@@ -1,11 +1,8 @@
-/*
-
-*/
-
-const promesaCumplida = true;
-
 // Crear una promesa.
 // setTimeout() simula un proceso asincrono.
+// Manejar cuando la promesa fue cumplida exitosamente.
+// No maneja lo que pasaria si es rechazada.
+const promesaCumplida = true;
 const miPromesa = new Promise((resolve, reject) => {
   setTimeout(() => {
     if (promesaCumplida) {
@@ -16,15 +13,9 @@ const miPromesa = new Promise((resolve, reject) => {
   }, 3000);
 });
 
-// Manejar cuando la promesa fue cumplida exitosamente.
-// No maneja lo que pasaria si es rechazada.
-miPromesa.then((valor) => {
-  console.log(valor);
-});
-
 // Definir dos funciones que manejen
 // cuando es aceptada y rechazada.
-const manejarPromesaCumplida = (valor) => {
+const truePromise = (valor) => {
   console.log(valor);
 };
 
@@ -32,7 +23,7 @@ const manejarPromesaRechazada = (razonRechazo) => {
   console.log(razonRechazo);
 };
 
-miPromesa.then(manejarPromesaCumplida, manejarPromesaRechazada);
+miPromesa.then(truePromise, manejarPromesaRechazada);
 
 // ------------------------
 // Ejemplo: Pedido de Pizza

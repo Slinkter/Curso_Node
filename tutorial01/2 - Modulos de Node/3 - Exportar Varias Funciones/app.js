@@ -1,7 +1,7 @@
-const xo = require("./saludo");
+const objectModulo = require("./saludo");
 
 // Llamar a las funciones importadas desde modulo saludo.js.
-console.log(xo.saludar("user"));
-console.log(xo.saludarHolaMundo());
+console.log(objectModulo.saludar("user"));
+console.log(objectModulo.saludarHolaMundo());
 // terminal
 // --> node app.js

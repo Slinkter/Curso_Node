@@ -1,9 +1,4 @@
-/*
- 
-*/
-
 const EventEmitter = require("events");
-
 const emisorProductos = new EventEmitter();
 
 // Ejemplo 1 - Sin parametros.
