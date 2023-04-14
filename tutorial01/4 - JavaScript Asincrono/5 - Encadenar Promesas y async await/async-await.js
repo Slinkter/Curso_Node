@@ -1,17 +1,13 @@
-/*
-* Curso de Node.js y Express.
-* Creado para freeCodeCamp en Español.
-* Por: Estefania Cassingena Navone. 
-*/
-
+// Con async await hacemos lo mismo de forma mas concisa.
+// Una funcion asincrona retorna una promesa.
 function ordenarProducto(producto) {
   return new Promise((resolve, reject) => {
-    console.log(`Ordenando: ${producto} de freeCodeCamp.`);
+    console.log(`Ordenando --------> ${producto} de Tienda.`);
     setTimeout(() => {
-      if (producto === 'taza') {
-        resolve('Ordenando una taza con el logo de freeCodeCamp...')
+      if (producto === "taza") {
+        resolve("Ordenando una taza con el logo de Tienda...");
       } else {
-        reject('Este producto no esta disponible actualmente.');
+        reject("Este producto no esta disponible actualmente.");
       }
     }, 2000);
   });
@@ -19,44 +15,27 @@ function ordenarProducto(producto) {
 
 function procesarPedido(respuesta) {
   return new Promise((resolve, reject) => {
-    console.log('Procesando respuesta...');
+    console.log("Procesando respuesta...");
     console.log(`La respuesta fue: ${respuesta}`);
     setTimeout(() => {
-      resolve('Gracias por tu compra. Disfruta tu producto de freeCodeCamp.');
+      resolve("Gracias por tu compra. Disfruta tu producto de Tienda.");
     }, 4000);
   });
 }
-
-// Realizar procesos asincronos en orden 
-// al esperar que uno se complete antes que el otro inicie.
-
-ordenarProducto('taza')
-  .then(respuesta => {
-    console.log('Respuesta recibida');
-    console.log(respuesta);
-    return procesarPedido(respuesta);
-  })
-  .then(respuestaProcesada => {
-    console.log(respuestaProcesada);
-  })
-  .catch(err => {
-    console.log(err);
-  });
-
-// Con async await hacemos lo mismo de forma mas concisa.
-// Una funcion asincrona retorna una promesa.
-
 async function realizarPedido(producto) {
   try {
-    const respuesta = await ordenarProducto(producto);
-    console.log('Respuesta recibida');
-    console.log(respuesta);
-    const respuestaProcesada = await procesarPedido(respuesta);
-    console.log(respuestaProcesada);
+    /*  */
+    console.group("Await");
+    const rpta = await ordenarProducto(producto);
+    const rptaProcesada = await procesarPedido(rpta);
+    console.log(rpta);
+    console.log(rptaProcesada);
+    console.groupEnd();
+    debugger;
   } catch (err) {
     console.log(err);
   }
 }
 
-realizarPedido('taza');
-// realizarPedido('lapiz');
+//realizarPedido("taza");
+realizarPedido("lapiz");
