@@ -62,6 +62,7 @@ Los temas están enfocados en un concepto específico. Aquí están dividos en c
 
 - ¿Qué es Nodemon?
 - Cómo instalarlo globalmente.
+  npm i -g nodemon
 - Cómo usarlo para actualizar aplicaciones de Node.js automáticamente.
 - Conceptos importantes: CRUD, REST, API.
 
