@@ -1,6 +1,9 @@
 const http = require("http");
 const { infoCursos } = require("./cursos");
+<<<<<<< HEAD
 const { log } = require("console");
+=======
+>>>>>>> b0616df (macos)
 
 const server = http.createServer((req, res) => {
   const metodo = req.method;
@@ -20,6 +23,7 @@ function manejarSolicitudGET(req, res) {
   const path = req.url;
   console.log(res.statusCode);
 
+<<<<<<< HEAD
   if (path === "/") {
     res.writeHead(200, { "": "" });
     return res.end(
@@ -28,6 +32,15 @@ function manejarSolicitudGET(req, res) {
   } else if (path === "/cursos") {
     return res.end(JSON.stringify(infoCursos));
   } else if (path === "/cursos/programacion") {
+=======
+  if (camino === "/") {
+    return res.end(
+      "Bienvenidos a mi primer servidor y API creados con Node.js."
+    );
+  } else if (camino === "/cursos") {
+    return res.end(JSON.stringify(infoCursos));
+  } else if (camino === "/cursos/programacion") {
+>>>>>>> b0616df (macos)
     return res.end(JSON.stringify(infoCursos.programacion));
   }
 
@@ -40,7 +53,11 @@ function manejarSolicitudPOST(req, res) {
 
   if (path === "/cursos/programacion") {
     let cuerpo = "";
+<<<<<<< HEAD
     /* evento on  */
+=======
+
+>>>>>>> b0616df (macos)
     req.on("data", (contenido) => {
       cuerpo += contenido.toString();
     });

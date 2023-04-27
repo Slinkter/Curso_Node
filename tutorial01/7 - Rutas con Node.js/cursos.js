@@ -1,43 +1,43 @@
 let infoCursos = {
-  'programacion': [
+  programacion: [
     {
       id: 1,
-      titulo: 'Aprende Python',
-      lenguaje: 'python',
+      titulo: "Aprende Python",
+      lenguaje: "python",
       vistas: 15000,
-      nivel: 'basico'
+      nivel: "basico",
     },
     {
       id: 2,
-      titulo: 'Python intermedio',
-      lenguaje: 'python',
+      titulo: "Python intermedio",
+      lenguaje: "python",
       vistas: 13553,
-      nivel: 'intermedio'
+      nivel: "intermedio",
     },
     {
       id: 3,
-      titulo: 'Aprende JavaScript',
-      lenguaje: 'javascript',
+      titulo: "Aprende JavaScript",
+      lenguaje: "javascript",
       vistas: 102223,
-      nivel: 'basico'
-    }
+      nivel: "basico",
+    },
   ],
-  'matematicas': [
+  matematicas: [
     {
       id: 1,
-      titulo: 'Aprende Calculo',
-      tema: 'calculo',
+      titulo: "Aprende Calculo",
+      tema: "calculo",
       vistas: 12427,
-      nivel: 'basico'
+      nivel: "basico",
     },
     {
       id: 2,
-      titulo: 'Aprende Algebra',
-      tema: 'algebra',
+      titulo: "Aprende Algebra",
+      tema: "algebra",
       vistas: 15722,
-      nivel: 'intermedio'
-    }
-  ]
-}
+      nivel: "intermedio",
+    },
+  ],
+};
 
 module.exports.infoCursos = infoCursos;
