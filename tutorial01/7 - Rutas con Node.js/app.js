@@ -1,13 +1,8 @@
 const http = require("http");
 const { infoCursos } = require("./cursos");
-<<<<<<< HEAD
-const { log } = require("console");
-=======
->>>>>>> b0616df (macos)
 
 const server = http.createServer((req, res) => {
   const metodo = req.method;
-
   switch (metodo) {
     case "GET":
       return manejarSolicitudGET(req, res);
@@ -18,21 +13,10 @@ const server = http.createServer((req, res) => {
       res.end(`El metodo no puede ser manejado por el servidor: ${metodo}`);
   }
 });
-/* --------------------------------------------- */
-function manejarSolicitudGET(req, res) {
-  const path = req.url;
-  console.log(res.statusCode);
 
-<<<<<<< HEAD
-  if (path === "/") {
-    res.writeHead(200, { "": "" });
-    return res.end(
-      "Bienvenidos a mi primer servidor y API creados con Node.js."
-    );
-  } else if (path === "/cursos") {
-    return res.end(JSON.stringify(infoCursos));
-  } else if (path === "/cursos/programacion") {
-=======
+function manejarSolicitudGET(req, res) {
+  const camino = req.url;
+
   if (camino === "/") {
     return res.end(
       "Bienvenidos a mi primer servidor y API creados con Node.js."
@@ -40,24 +24,19 @@ function manejarSolicitudGET(req, res) {
   } else if (camino === "/cursos") {
     return res.end(JSON.stringify(infoCursos));
   } else if (camino === "/cursos/programacion") {
->>>>>>> b0616df (macos)
     return res.end(JSON.stringify(infoCursos.programacion));
   }
 
   res.statusCode = 404;
   return res.end("El recurso solicitado no existe...");
 }
-/* --------------------------------------------- */
+
 function manejarSolicitudPOST(req, res) {
   const path = req.url;
 
   if (path === "/cursos/programacion") {
     let cuerpo = "";
-<<<<<<< HEAD
-    /* evento on  */
-=======
 
->>>>>>> b0616df (macos)
     req.on("data", (contenido) => {
       cuerpo += contenido.toString();
     });
@@ -70,7 +49,6 @@ function manejarSolicitudPOST(req, res) {
       cuerpo = JSON.parse(cuerpo);
 
       console.log(typeof cuerpo);
-      console.log(cuerpo);
       console.log(cuerpo.titulo);
 
       res.end(
