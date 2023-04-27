@@ -15,7 +15,6 @@ console.log(infoCurso.temas);
 // Objeto -> Cadena de Caracteres en formato JSON.
 console.log("===== En formato JSON con JSON.stringify() =====");
 let infoJSON = JSON.stringify(infoCurso);
-
 console.log(infoJSON);
 console.log(typeof infoJSON);
 
