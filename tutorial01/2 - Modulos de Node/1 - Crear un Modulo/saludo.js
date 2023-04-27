@@ -2,11 +2,11 @@ function saludar(nombre) {
   return `Hola ${nombre}`;
 }
 
-const saludar02 = (name) => {
-  return `Hola ${name}`;
+const greethings = (name) => {
+  return `Hello ${name}`;
 };
 // CommonJS module
-module.exports = { saludar, saludar02 };
+module.exports = { saludar, greethings };
 /* 
 // ES module
 export default saludar; 

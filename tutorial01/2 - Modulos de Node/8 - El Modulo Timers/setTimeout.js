@@ -1,13 +1,14 @@
 // Ejemplo con un solo argumento.
+// setTimeout(func,time,Args)
+// se ejecuta 1 vez
 function mostrarTema(tema) {
   console.log(`Estoy aprendiendo ${tema}`);
 }
-// setTimeout(func,time,Args)
 setTimeout(mostrarTema, 5000, "Node.js");
 
 // Ejemplo con varios argumentos.
+//setTimeout(func,time,Arg01,Arg02)
 function sumar(a, b) {
   console.log(a + b);
 }
-//setTimeout(func,time,Arg01,Arg02)
-setTimeout(sumar, 2000, 5, 6);
+setTimeout(sumar, 000, 5, 6);
